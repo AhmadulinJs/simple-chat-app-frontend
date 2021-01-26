@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import {Box, Divider, Grid, IconButton, TextField} from '@material-ui/core'
+import { Box, Divider, Grid, IconButton, TextField } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
 // ICONS
@@ -9,19 +9,19 @@ import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 import NearMeIcon from '@material-ui/icons/NearMe';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-      backgroundColor: 'rgba(30, 39, 46,.96)',
-      bottom: 0,
-    //   width: "initial",
-  },
-  emojiBtn: {
-      fontSize: "30px", 
-      color: "#7f8c8d"
-  },
-  customStyleTextField: {
-      color: "#fff",
-      width: "100%"
-  }
+    root: {
+        backgroundColor: 'rgba(30, 39, 46,.98)',
+        bottom: 0,
+        //   width: "initial",
+    },
+    emojiBtn: {
+        fontSize: "30px",
+        color: "#7f8c8d"
+    },
+    customStyleTextField: {
+        color: "#fff",
+        width: "100%"
+    }
 }));
 
 function ChatInputComponent() {
@@ -30,7 +30,7 @@ function ChatInputComponent() {
     return (
         <Box className={classes.root} pb={1} width="100%">
             <Box mb={1}>
-            <Divider style={{backgroundColor: "#7f8c8d"}}/>
+                <Divider style={{ backgroundColor: "#7f8c8d" }} />
             </Box>
 
             <Box pl={2} pr={2}>
@@ -40,11 +40,11 @@ function ChatInputComponent() {
                             <InsertDriveFileIcon className={classes.emojiBtn} />
                         </IconButton>
                     </Grid>
-                   
+
                     <Grid item xs={10}>
-                    <TextField placeholder="Write a message.." style={{color: "#fff"}} fullWidth InputProps={{
-                        className: classes.customStyleTextField
-                    }} />
+                        <TextField placeholder="Write a message.." style={{ color: "#fff" }} fullWidth InputProps={{
+                            className: classes.customStyleTextField
+                        }} />
                     </Grid>
                     <Grid item >
                         <IconButton color="primary">
@@ -52,7 +52,7 @@ function ChatInputComponent() {
                         </IconButton>
                     </Grid>
                     <Grid item >
-                        <IconButton color="primary"> 
+                        <IconButton color="primary">
                             <NearMeIcon className={classes.emojiBtn} />
                         </IconButton>
                     </Grid>

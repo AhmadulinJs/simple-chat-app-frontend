@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import {Box, Grid, Typography} from '@material-ui/core'
+import { Box, Grid, Typography } from '@material-ui/core'
 import DoneIcon from '@material-ui/icons/Done';
 import DoneAllIcon from '@material-ui/icons/DoneAll';
 
-import {makeStyles} from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,35 +23,28 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-export default function ChatMessageBox() {
+export default function ChatMessageBox(props) {
     const classes = useStyles();
 
     return (
-        <Grid className={classes.root} xs={10}>
-            <Box mb={1} ml={1} mr={1} mt={1}>
-                <Grid item >
-                    <Box p={1.5} boxShadow={2} className={classes.messageBox}>
-                        <Grid container direction="row" wrap="nowrap" alignItems="flex-end" spacing={1}>
-
-                        <Grid item>
-                            <Typography> 
-                                hello i will play with you 
-                            </Typography>
-                        </Grid>
-                        <Grid item>
-                                {/* SEND DONE ICON */}
-                                {/* <DoneIcon className={classes.doneIconSizing} /> */}
-                                
-                                {/* ALL DONE ICON */}
-                                <DoneAllIcon className={classes.doneIconSizing} />
-                        </Grid>
-                        </Grid>
-                    </Box>
-                </Grid>
-                <Typography variant="body2">
-                    13:09
-                </Typography>
-            </Box>
+        <Grid item container direction="column" alignItems={props.position === 'left' ? 'flex-end' : 'flex-start'}>
+            <Grid className={classes.root} xs={10}>
+                <Box mb={1} ml={1} mr={1} mt={1}>
+                    <Grid item >
+                        <Box p={1.5} boxShadow={2} className={classes.messageBox}>
+                            <Grid container direction="row" wrap="nowrap" alignItems="flex-end" spacing={1}>
+                                <Grid item>
+                                    <Typography>{props.text}</Typography>
+                                </Grid>
+                                <Grid item>
+                                    {props.see ? <DoneAllIcon className={classes.doneIconSizing} /> : <DoneIcon className={classes.doneIconSizing} />}
+                                </Grid>
+                            </Grid>
+                        </Box>
+                    </Grid>
+                    <Typography variant="body2">{props.time}</Typography>
+                </Box>
+            </Grid>
         </Grid>
     )
 }
