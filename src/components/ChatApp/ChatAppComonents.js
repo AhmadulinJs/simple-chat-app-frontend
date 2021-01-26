@@ -73,7 +73,12 @@ function ChatAppComonents() {
   );
   return (
     <Box>
-      <Grid container direction="row" wrap="nowrap" style={{minHeight: "100vh"}}>
+      <Grid
+        container
+        direction="row"
+        wrap="nowrap"
+        style={{ minHeight: "100vh" }}
+      >
         <Hidden mdUp>
           <Grid
             container
