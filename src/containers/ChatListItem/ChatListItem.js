@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import {
   Avatar,
   Box,
@@ -82,9 +81,7 @@ function ChatListItem(props) {
           <Grid
             wrap="nowrap"
             container
-            container
             direction="row"
-            wrap="nowrap"
             justif="center"
             alignItems="center"
             spacing={1}

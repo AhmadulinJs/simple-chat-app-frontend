@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDom from "react-dom";
 import { Box, Grid, Typography } from "@material-ui/core";
 import DoneIcon from "@material-ui/icons/Done";
 import DoneAllIcon from "@material-ui/icons/DoneAll";
@@ -32,7 +31,7 @@ export default function ChatMessageBox(props) {
       direction="column"
       alignItems={props.position === "left" ? "flex-end" : "flex-start"}
     >
-      <Grid className={classes.root} xs={10}>
+      <Grid className={classes.root}>
         <Box mb={1} ml={1} mr={1} mt={1}>
           <Grid item>
             <Box p={1.5} boxShadow={2} className={classes.messageBox}>

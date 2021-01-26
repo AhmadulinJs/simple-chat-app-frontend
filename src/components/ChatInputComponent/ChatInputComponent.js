@@ -1,6 +1,11 @@
 import React from "react";
-import ReactDom from "react-dom";
-import { Box, Divider, Grid, IconButton, TextField } from "@material-ui/core";
+import {
+  Box,
+  Divider,
+  Grid,
+  IconButton,
+  TextField,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 // ICONS
@@ -21,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     width: "100%",
   },
+  uploadInput: {
+    display: "none",
+  }
 }));
 
 function ChatInputComponent() {
@@ -33,42 +41,52 @@ function ChatInputComponent() {
       </Box>
 
       <Box pl={2} pr={2}>
-        <Grid
-          item
-          container
-          direction="row"
-          justify="space-around"
-          alignItems="center"
-          spacing={1}
-          wrap="nowrap"
-        >
-          <Grid item>
-            <IconButton color="primary">
-              <InsertDriveFileIcon className={classes.emojiBtn} />
-            </IconButton>
-          </Grid>
+        <form>
+          <Grid
+            item
+            container
+            direction="row"
+            justify="space-around"
+            alignItems="center"
+            spacing={1}
+            wrap="nowrap"
+          >
+            {/* FILE UPLOAD BTN */}
+            <Grid item>
+              <input className={classes.uploadInput} id="icon-button-file" type="file" />
+              <label htmlFor="icon-button-file">
+                <IconButton
+                  aria-label="upload-file"
+                  component="span"
+                  color="primary"
+                >
+                  <InsertDriveFileIcon className={classes.emojiBtn} />
+                </IconButton>
+              </label>
+            </Grid>
 
-          <Grid item xs={10}>
-            <TextField
-              placeholder="Write a message.."
-              style={{ color: "#fff" }}
-              fullWidth
-              InputProps={{
-                className: classes.customStyleTextField,
-              }}
-            />
+            <Grid item xs={10}>
+              <TextField
+                placeholder="Write a message.."
+                style={{ color: "#fff" }}
+                fullWidth
+                InputProps={{
+                  className: classes.customStyleTextField,
+                }}
+              />
+            </Grid>
+            <Grid item>
+              <IconButton color="primary">
+                <InsertEmoticonIcon className={classes.emojiBtn} />
+              </IconButton>
+            </Grid>
+            <Grid item>
+              <IconButton color="primary">
+                <NearMeIcon className={classes.emojiBtn} />
+              </IconButton>
+            </Grid>
           </Grid>
-          <Grid item>
-            <IconButton color="primary">
-              <InsertEmoticonIcon className={classes.emojiBtn} />
-            </IconButton>
-          </Grid>
-          <Grid item>
-            <IconButton color="primary">
-              <NearMeIcon className={classes.emojiBtn} />
-            </IconButton>
-          </Grid>
-        </Grid>
+          </form>
       </Box>
     </Box>
   );

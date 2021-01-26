@@ -1,9 +1,7 @@
 import React from "react";
-import ReactDom from "react-dom";
-import { Box, Grid } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import ChatMessageBox from "../../containers/ChatMessageBox/ChatMessageBox";
-import ChatInputComponent from "../ChatInputComponent/ChatInputComponent";
 
 const useStyles = makeStyles((theme) => ({
   root: {

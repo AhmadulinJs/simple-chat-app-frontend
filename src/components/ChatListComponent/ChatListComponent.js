@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { Box, Grid } from "@material-ui/core";
 import ChatListItem from "../../containers/ChatListItem/ChatListItem";
 import { makeStyles } from "@material-ui/core/styles";
