@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Grid } from "@material-ui/core";
 import ChatListItem from "../../containers/ChatListItem/ChatListItem";
 import { makeStyles } from "@material-ui/core/styles";
+import UsersHeader from '../../containers/UsersHeader/UsersHeader'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -10,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     overflowY: "auto",
     overflowX: "hidden",
     boxShadow: "1px 0px 10px -2px #000000",
+    position: "relavite",
 
     "&::-webkit-scrollbar ": {
       width: "3px",
@@ -28,12 +30,17 @@ function ChatListComponent() {
   const classes = useStyles();
   return (
     <Box pr={0} className={classes.root}>
+      <Grid item>
+        <UsersHeader />
+      </Grid>
       <Grid
         container
         direction="column"
         style={{ padding: 0, margin: 0 }}
         wrap="nowrap"
       >
+        {/* USERS HEADER */}
+
         <ChatListItem
           userPhotoUrl="https://www.rirc.ru/img/work.png"
           online={true}

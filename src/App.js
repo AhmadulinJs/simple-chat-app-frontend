@@ -7,8 +7,8 @@ import SignIpComponent from './components/SignInComponent/SignIpComponent'
 function App() {
   return (
     <Box style={{ overflow: "hidden" }}>
-      {/* <ChatAppComonents /> */}
-      <SignUpComponent />
+      <ChatAppComonents />
+      {/* <SignUpComponent /> */}
       {/* <SignIpComponent /> */}
     </Box>
   );
