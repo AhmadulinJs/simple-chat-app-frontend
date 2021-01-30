@@ -16,6 +16,10 @@ const useStyles = makeStyles((theme) => ({
     "&::-webkit-scrollbar ": {
       width: "3px",
     },
+    UsersHeader: {
+      position: "sticky",
+      top: "1rem"
+    },
 
     "&::-webkit-scrollbar-thumb": {
       background: "#7f8c8d",
@@ -30,7 +34,7 @@ function ChatListComponent() {
   const classes = useStyles();
   return (
     <Box pr={0} className={classes.root}>
-      <Grid item>
+      <Grid item style={{ position: "sticky", top: 0, zIndex: 1111 }}>
         <UsersHeader />
       </Grid>
       <Grid

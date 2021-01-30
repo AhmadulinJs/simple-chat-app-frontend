@@ -7,9 +7,13 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    backgroundColor: "#2c3e50",
+  },
+  rootInput: {
+    width: "100%",
     '&:placeholder': {
       fontWeight: 400,
-      color: "red"
+      color: "red",
     }
   },
   customInputStyle: {
@@ -43,8 +47,8 @@ function UsersHeader(props) {
             </IconButton>
           </Box>
         </Grid>
-        <Grid item xs={10}>
-          <Box mr={1} className={classes.root}>
+        <Grid item xs={10} style={{ marginRight: "6px" }}>
+          <Box mr={1} className={classes.rootInput}>
             <InputBase className={classes.customInputStyle} margin="none" fullWidth placeholder="Search" size="small" variant="outlined" />
           </Box>
         </Grid>
