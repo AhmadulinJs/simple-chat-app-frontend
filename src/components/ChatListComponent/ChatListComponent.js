@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     overflowY: "auto",
     overflowX: "hidden",
-    boxShadow: "1px 0px 10px -2px #000000",
+    boxShadow: "0px 0px 11px -4px #000000",
     position: "relavite",
 
     "&::-webkit-scrollbar ": {

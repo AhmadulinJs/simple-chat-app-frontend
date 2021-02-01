@@ -15,6 +15,8 @@ import NearMeIcon from "@material-ui/icons/NearMe";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    zIndex: 1111,
+    height: "100%",
     backgroundColor: "rgba(30, 39, 46,.98)",
     bottom: 0,
   },
@@ -86,7 +88,7 @@ function ChatInputComponent() {
               </IconButton>
             </Grid>
           </Grid>
-          </form>
+        </form>
       </Box>
     </Box>
   );

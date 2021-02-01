@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@material-ui/core";
+import { Box, AppBar } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import ChatMessageBox from "../../containers/ChatMessageBox/ChatMessageBox";
 
@@ -55,7 +55,9 @@ function ChatMessageComponent() {
   const classes = useStyles();
 
   return (
-    <Box className={classes.root}>
+    <Box className={classes.root} >
+
+      {/* MESSAGE */}
       <ChatMessageBox
         text="lorem ipsom"
         position="left"
@@ -69,6 +71,52 @@ function ChatMessageComponent() {
         time="14:46"
       />
       <ChatMessageBox
+        text="hello john"
+        position="right"
+        see={false}
+        time="14:46"
+      />
+      <ChatMessageBox
+        text="hello john"
+        position="right"
+        see={false}
+        time="14:46"
+      />
+      <ChatMessageBox
+        text="hello john"
+        position="right"
+        see={false}
+        time="14:46"
+      />
+      <ChatMessageBox
+        text="hello john"
+        position="right"
+        see={false}
+        time="14:46"
+      />
+      <ChatMessageBox
+        text="hello john"
+        position="right"
+        see={false}
+        time="14:46"
+      />
+      <ChatMessageBox
+        text="hello john"
+        position="right"
+        see={false}
+        time="14:46"
+      />
+      <ChatMessageBox
+        text="hello john"
+        position="right"
+        see={false}
+        time="14:46"
+      /> <ChatMessageBox
+        text="hello john"
+        position="right"
+        see={false}
+        time="14:46"
+      /> <ChatMessageBox
         text="hello john"
         position="right"
         see={false}

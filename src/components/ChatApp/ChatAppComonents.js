@@ -5,12 +5,15 @@ import {
   SwipeableDrawer,
   Hidden,
   IconButton,
+  AppBar,
 } from "@material-ui/core";
 import ChatListComponent from "../ChatListComponent/ChatListComponent";
 import ChatMessageComponent from "../ChatMessageComponent/ChatMessageComponent";
 import ChatInputComponent from "../ChatInputComponent/ChatInputComponent";
 import clsx from "clsx";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import MenuIcon from '@material-ui/icons/Menu';
+import UsersMessageBoxHeader from '../../containers/UsersMessageBoxHeader/UsersMessageBoxHeader'
+
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -19,11 +22,13 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
   },
   gridItem: {
+    // paddingTop: 50,
     height: "100%",
-    maxHeight: "calc(100vh - 71px)",
+    maxHeight: "calc(100vh - 131px)",
   },
 
   listCustomSizing: {
+    zIndex: 1111,
     minWidth: "355px",
     maxWidth: "355px",
 
@@ -85,6 +90,8 @@ function ChatAppComonents() {
               maxWidth: "65px",
               minWidth: "65px",
               background: "#2c3e50",
+              boxShadow: "0px 0px 11px -4px #000000",
+              zIndex: 1111
             }}
           >
             {["left"].map((anchor) => (
@@ -94,7 +101,7 @@ function ChatAppComonents() {
                     style={{ color: "#fff" }}
                     onClick={toggleDrawer(anchor, true)}
                   >
-                    <ChevronRightIcon />
+                    <MenuIcon />
                   </IconButton>
                 </Box>
                 <SwipeableDrawer
@@ -115,8 +122,15 @@ function ChatAppComonents() {
           </Grid>
         </Hidden>
         <Grid container direction="column" justify="flex-end" wrap="nowrap">
+          {/* Meesage header */}
+          <Grid item style={{ position: "sticky", boxShadow: `0px 0px 11px -4px #000000`, zIndex: 111 }}>
+            <UsersMessageBoxHeader />
+          </Grid>
           <Grid item className={classes.gridItem}>
+
+
             <ChatMessageComponent />
+
           </Grid>
 
           {/* CHAT INPUT */}

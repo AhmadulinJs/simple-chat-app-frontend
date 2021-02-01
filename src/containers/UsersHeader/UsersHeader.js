@@ -42,7 +42,7 @@ function UsersHeader(props) {
       <Grid container direction="row" justify="space-around" alignItems="center" wrap="nowrap">
         <Grid item>
           <Box>
-            <IconButton color="primary">
+            <IconButton onClick={props.handleClicked} color="primary">
               <MenuIcon style={{ color: "#fff" }} />
             </IconButton>
           </Box>
